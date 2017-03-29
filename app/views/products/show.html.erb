@@ -20,5 +20,10 @@
   <%= @product.category.try(:name) %>
 </p>
 
+<p>
+  <strong>Category:</strong>
+  <%= @product.tags.collect(&:name) %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
